@@ -6,8 +6,17 @@ struct User{
     name: String,
     age:u64,
 }
-impl User {
 
+
+impl User {
+    fn new(name: &str ,age: u64) -> Self{
+
+User{
+name:name.to_string(),
+age
+}
+
+}
     fn get_user_details(&self) ->u64{
         return self.age
     }
