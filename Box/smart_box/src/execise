@@ -1,0 +1,13 @@
+Exercise 1: Create a Basic Linked List
+Create an enum List with two variants:
+
+Cons(i32, Box<List>): holds a value of type i32 and a pointer to the next list.
+
+Nil: represents the end of the list.
+
+Create a linked list with the following structure:
+
+1 -> 2 -> 3 -> Nil
+
+Write a function that traverses the list and prints each value.
+
