@@ -11,3 +11,17 @@ Create a linked list with the following structure:
 
 Write a function that traverses the list and prints each value.
 
+
+
+Exercise 2: Recursive Sum of List
+Define the same List enum as in Exercise 1.
+
+Implement a recursive function sum(list: Box<List>) -> i32 that calculates the sum of all the values in the list. The function should stop when it reaches Nil.
+
+Exercise 3: Reverse a Linked List
+Define the same List enum as in Exercise 1.
+
+Implement a function reverse(list: Box<List>) -> Box<List>> that reverses the linked list.
+
+For example, if the input is 1 -> 2 -> 3 -> Nil, the output should be 3 -> 2 -> 1 -> Nil.
+
