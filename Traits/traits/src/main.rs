@@ -3,13 +3,9 @@ use std::{fmt::Display, vec};
 use types::Types::Book;
 fn main() {
 
-    let mut book1 = Book{
-        books: vec![String::from("Things fall apart"), 
+    let mut book1 = Book::new(vec![String::from("Things fall apart"), 
         String::from("Invinsible"),
-        String::from("Think and grow rich")],
-        pages: 300,
-        count: 0,
-    };
+        String::from("Think and grow rich")], 300);
 
     println!("{}", book1);
     let word = "Hello";

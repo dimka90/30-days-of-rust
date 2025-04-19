@@ -12,6 +12,17 @@ pub mod Types{
     }
 }
 
+impl  Book {
+    
+    pub fn new( books: Vec<String>, pages: u16,)->Self{
+        Self {
+            books,
+            pages, 
+            count: 0
+        }
+    }
+}
+
 impl fmt::Display for Types::Book{
     fn fmt(&self, f: &mut fmt::Formatter<'_>) -> fmt::Result {
         
