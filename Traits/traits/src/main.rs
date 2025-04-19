@@ -9,7 +9,6 @@ fn main() {
         String::from("Think and grow rich")],
         pages: 300,
         count: 0,
-        len: 3
     };
 
     println!("{}", book1);

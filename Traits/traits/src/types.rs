@@ -9,7 +9,6 @@ pub mod Types{
        pub books: Vec<String>,
         pub pages: u16,
         pub count: i16,
-        pub len: usize
     }
 }
 
@@ -24,7 +23,7 @@ impl  Iterator for Book {
     type Item = String;
 
     fn next(&mut self) -> Option<Self::Item> {
-        if self.count <  self.len  as i16{
+        if self.count <  self.books.len() as i16{
         let result = self.books[self.count as usize].clone();
         self.count+=1;
         return  Some(result);
