@@ -3,8 +3,6 @@ use std::fmt::{self, Display};
 use Types::Book;
 
 pub mod Types{
-
-    
     pub struct Book{
        pub books: Vec<String>,
         pub pages: u16,

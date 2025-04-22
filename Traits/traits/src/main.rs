@@ -17,7 +17,6 @@ fn main() {
 }
 
 fn print_twice<T: Display>(data: &T){
-
     for i in 1..=2{
         println!("{}", data)
     }
