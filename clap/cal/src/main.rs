@@ -1,6 +1,3 @@
-use core::num;
-use std::{process::CommandArgs, result};
-
 use clap::{Arg, Command};
 
 fn main() {
@@ -9,21 +6,24 @@ fn main() {
                                     .author("Dimka")
                                     .about("A Calculator cli that perform simple multiplication")
                                     .version("v.0.1")
+                                    .subcommand(
+                                        Command::new("add")
+                                        .about("A function that adds to two numbers")
                                     .arg(
-                                        Arg::new("Calculator")
-                                        .long("Calculator")
+                                        Arg::new("numbers")
+                                        .long("cal")
                                         .value_name("first Number")
                                         .num_args(2)
+                                        .required(true)
                                         .value_parser(clap::value_parser!(i32))
-                                    )
+                                    ),
+                                )
                                 .get_matches();
 
-    if let Some(values) =  new_command_line.get_many::<i32>("Calculator"){
+    if let Some(values) =  new_command_line.get_many::<i32>("numbers"){
 
         let numbers: Vec<i32> = values.copied().collect();
-        let first_number = numbers[0];
-        let second_number = numbers[1];
-        let result = first_number + second_number;
+        let result = numbers[1]+ numbers[0];
         println!("Result {:?}", result);
 
 
