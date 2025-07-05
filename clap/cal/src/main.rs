@@ -95,11 +95,11 @@ fn main() {
                 div_matches.get_one::<i32>("first_number"),
                  div_matches.get_one::<i32>("second_number")) {
                 
-                if *first == 0 {
+                if *second == 0 {
                     eprintln!("Error: Division by zero");
-                    process::exit(0)
+                    process::exit(1);
                 }
-                let result:f64 = (first   / second).into();
+                let result:f64 = *first  as f64  / *second as f64;
 
                 println!("Result: {:?}", result);
             }
