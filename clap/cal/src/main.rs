@@ -41,6 +41,23 @@ fn main() {
                     .value_parser(clap::value_parser!(i32))
                 )
             )
+            .subcommand(
+                Command::new("div")
+                .about("Div two numbers")
+                .arg(
+                    Arg::new("first_number")
+                    .required(true)
+                    .value_parser(clap::value_parser!(i32))
+                    .value_name("FIRST NUMBER")
+                )
+                .arg(
+                    Arg::new("second_number")
+                    .required(true)
+                    .value_parser(clap::value_parser!(i32))
+                    .value_name("SECOND NUMBER")
+                )
+            )
+
         .get_matches();
     match matches.subcommand() {
         Some(("add", add_matches)) => {
@@ -70,7 +87,23 @@ fn main() {
                 eprint!("Invalid input for multiplication");
                 process::exit(1);
             }
+      
         },
+
+          Some(("div", div_matches)) => {
+            if let (Some(first), Some(second)) =  (
+                div_matches.get_one::<i32>("first_number"),
+                 div_matches.get_one::<i32>("second_number")) {
+                
+                if *first == 0 {
+                    eprintln!("Error: Division by zero");
+                    process::exit(0)
+                }
+                let result:f64 = (first   / second).into();
+
+                println!("Result: {:?}", result);
+            }
+        }
         _ => println!("Invalid input"),
     }
 }
