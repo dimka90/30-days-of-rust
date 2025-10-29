@@ -25,8 +25,24 @@ impl DatabaseConfigBuilder {
             max_connections: None,
         }
     }
-    pub fn port(mut self, host: String) -> Self {
+    pub fn host(mut self, host: String) -> Self {
         self.host =  Some(host);
+        self
+    }
+    pub fn port(mut self, port: u16) -> Self{
+        self.port = Some(port);
+        self
+    }
+    pub fn username(mut self, username: String) -> Self{
+        self.username = Some(username);
+        self
+    }
+    pub fn password(mut self, password: String) -> Self{
+        self.username = Some(password);
+        self
+    }
+    pub  fn max_connections(mut self, max_con: u32) -> Self{
+        self.max_connections = Some(max_con);
         self
     }
 }
