@@ -1,5 +1,3 @@
-use std::io::ErrorKind;
-
 #[derive(Debug)]
 pub struct DatabaseConfig {
     host: String,

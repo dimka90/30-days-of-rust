@@ -1,6 +1,6 @@
 mod database;
 
-use crate::database::database::{DatabaseConfig, DatabaseConfigBuilder};
+use crate::database::database::{DatabaseConfigBuilder};
 fn main() {
     let postgress = DatabaseConfigBuilder::new()
                                             .host(String::from("5000"))
