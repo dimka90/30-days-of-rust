@@ -1,6 +1,6 @@
 #[derive(Debug)]
 pub struct HttpRequest {
-   pub  method: String,
+   pub  method: HttpMethod,
     pub url: String,
     pub headers: Vec<(String, String)>,
     pub body: Option<String>,
@@ -8,13 +8,13 @@ pub struct HttpRequest {
 
 #[derive(Debug)]
 pub struct HttpRequestBuilder {
-    pub method: String,
+    pub method: HttpMethod,
     pub url: String,
     pub headers: Vec<(String, String)>,
     pub body: Option<String>,
 }
-
-enum  HttpMethod {
+#[derive(Debug)]
+pub enum  HttpMethod {
     GET,
     POST,
     PUT,
@@ -25,15 +25,15 @@ enum  HttpMethod {
 impl HttpRequestBuilder {
     pub fn new(url: &str) -> Self {
         Self {
-            method: "GET".to_string(),
+            method: HttpMethod::GET,
             url: url.to_string(),
             headers: Vec::new(),
             body: None,
         }
     }
 
-    pub fn method(mut self, method: &str) -> Self {
-        self.method = method.to_string();
+    pub fn method(mut self, method: HttpMethod) -> Self {
+        self.method = method;
         self
     }
     pub fn url(mut self, url: &str) -> Self {
@@ -48,7 +48,7 @@ impl HttpRequestBuilder {
         self.body = Some(body);
         self
     }
-    pub fn build(mut self) -> HttpRequest {
+    pub fn build(self) -> HttpRequest {
         HttpRequest {
             method: self.method,
             url: self.url,
