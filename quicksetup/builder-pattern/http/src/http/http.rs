@@ -14,6 +14,14 @@ pub struct HttpRequestBuilder {
     pub body: Option<String>,
 }
 
+enum  HttpMethod {
+    GET,
+    POST,
+    PUT,
+    PATCH,
+    HEAD
+}
+
 impl HttpRequestBuilder {
     pub fn new(url: &str) -> Self {
         Self {
