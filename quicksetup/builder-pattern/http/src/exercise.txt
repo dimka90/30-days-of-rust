@@ -1,0 +1,5 @@
+// Given:
+let numbers = vec![1, 2, 3, 4, 5];
+
+// TODO: Use iterators to double each number
+// Expected: [2, 4, 6, 8, 10]
