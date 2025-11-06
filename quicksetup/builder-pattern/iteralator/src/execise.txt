@@ -37,4 +37,17 @@ let words = vec!["hi", "hello", "world", "a", "rust", "programming"];
 // TODO: Keep words longer than 4 chars, make them uppercase
 // Expected: ["HELLO", "WORLD", "PROGRAMMING"]
 
-// Exercise 
+// Exercise struct Item {
+    name: String,
+    price: f64,
+    quantity: u32,
+}
+
+let cart = vec![
+    Item { name: "Apple".to_string(), price: 0.5, quantity: 10 },
+    Item { name: "Bread".to_string(), price: 2.0, quantity: 2 },
+    Item { name: "Milk".to_string(), price: 3.5, quantity: 1 },
+];
+
+// TODO: Calculate total cost (price * quantity for all items)
+// Expected: 12.5

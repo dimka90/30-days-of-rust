@@ -1,5 +1,11 @@
-use core::num;
-use std::{iter::Flatten, string};
+use std::iter::Sum;
+
+#[derive(Debug)]
+struct Item {
+    name: String,
+    price: f64,
+    quantity: u32,
+}
 
 fn main() {
     let numbers = vec![1, 2, 3, 4, 5];
@@ -51,6 +57,27 @@ fn main() {
         .filter(|word| word.len() > 4)
         .map(|word| word.to_uppercase())
         .collect();
-    println!("{:?}", words_uppercase)
+    println!("{:?}", words_uppercase);
 
+    let cart = vec![
+        Item {
+            name: "Apple".to_string(),
+            price: 0.5,
+            quantity: 10,
+        },
+        Item {
+            name: "Bread".to_string(),
+            price: 2.0,
+            quantity: 2,
+        },
+        Item {
+            name: "Milk".to_string(),
+            price: 3.5,
+            quantity: 1,
+        },
+    ];
+  
+    let price: u32 = cart.iter().map(|item| item.quantity).sum();
+
+    println!("{:?}", price);
 }
