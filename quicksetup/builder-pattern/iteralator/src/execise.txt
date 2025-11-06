@@ -10,3 +10,10 @@ let ages = vec![12, 45, 18, 7, 33, 16, 21];
 
 // TODO: Use iterators to get only ages 18+
 // Expected: [45, 18, 33, 21]
+// Excersie 3
+// Given:
+let strings = vec!["42", "not a number", "100", "7", "oops"];
+
+// TODO: Parse to i32, keep only successful parses
+// Hint: Use filter_map with .parse::<i32>().ok()
+// Expected: [42, 100, 7]
