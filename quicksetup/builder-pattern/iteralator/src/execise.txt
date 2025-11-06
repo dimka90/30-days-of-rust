@@ -24,3 +24,17 @@ let names = vec!["alice", "bob", "charlie"];
 
 // TODO: Convert all names to uppercase
 // Expected: ["ALICE", "BOB", "CHARLIE"]
+
+// // Exercise 4: Filter Then Transform
+let numbers = vec![1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+// TODO: Get even numbers, then square them
+// Expected: [4, 16, 36, 64, 100]
+
+// Excersie 5
+let words = vec!["hi", "hello", "world", "a", "rust", "programming"];
+
+// TODO: Keep words longer than 4 chars, make them uppercase
+// Expected: ["HELLO", "WORLD", "PROGRAMMING"]
+
+// Exercise 
