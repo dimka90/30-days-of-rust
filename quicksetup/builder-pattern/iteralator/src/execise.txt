@@ -3,3 +3,10 @@ let numbers = vec![1, 2, 3, 4, 5];
 
 // TODO: Use iterators to double each number
 // Expected: [2, 4, 6, 8, 10]
+
+// Excersie 2
+// Given:
+let ages = vec![12, 45, 18, 7, 33, 16, 21];
+
+// TODO: Use iterators to get only ages 18+
+// Expected: [45, 18, 33, 21]
