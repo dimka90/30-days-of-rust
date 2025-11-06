@@ -17,3 +17,10 @@ let strings = vec!["42", "not a number", "100", "7", "oops"];
 // TODO: Parse to i32, keep only successful parses
 // Hint: Use filter_map with .parse::<i32>().ok()
 // Expected: [42, 100, 7]
+
+// Excersie 3
+// Given:
+let names = vec!["alice", "bob", "charlie"];
+
+// TODO: Convert all names to uppercase
+// Expected: ["ALICE", "BOB", "CHARLIE"]

@@ -27,4 +27,15 @@ fn main() {
                .map(|item| item.unwrap())
                .collect();
     println!("{:?}", nums);
+
+    // Given:
+let names = vec!["alice", "bob", "charlie"];
+
+let names_to_upper_case:Vec<_> = names.
+                            iter()
+                            .map(|name| name.to_uppercase())
+                            .collect();
+println!("{:?}",names_to_upper_case );
+// TODO: Convert all names to uppercase
+// Expected: ["ALICE", "BOB", "CHARLIE"]
 }
