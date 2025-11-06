@@ -51,3 +51,11 @@ let cart = vec![
 
 // TODO: Calculate total cost (price * quantity for all items)
 // Expected: 12.5
+
+// Exercise 8
+// Given:
+let input = "name:Alice,age:30,city:NYC,invalid,country:USA";
+
+// TODO: Parse into Vec of tuples, skip invalid entries
+// Hint: Use split, filter_map with split_once
+// Expected: [("name", "Alice"), ("age", "30"), ("city", "NYC"), ("country", "USA")]

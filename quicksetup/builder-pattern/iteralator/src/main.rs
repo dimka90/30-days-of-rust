@@ -76,8 +76,16 @@ fn main() {
             quantity: 1,
         },
     ];
-  
+
     let price: u32 = cart.iter().map(|item| item.quantity).sum();
 
     println!("{:?}", price);
+
+    // Given:
+    let input = "name:Alice,age:30,city:NYC,invalid,country:USA";
+    let result: Vec<(_, _)> = input
+        .split(",")
+        .filter_map(|input| input.split_once(":"))
+        .collect();
+    println!("{:?}", result);
 }
