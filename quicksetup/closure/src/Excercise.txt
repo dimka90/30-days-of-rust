@@ -1,0 +1,7 @@
+Exercise 1: Basic Closure
+Create a closure that takes two numbers and returns their sum. Call it multiple times.
+
+Exercise 2: Capturing Environment (Easy)
+let multiplier = 5;
+// Create a closure that multiplies its input by 'multiplier'
+// Call it with different values
