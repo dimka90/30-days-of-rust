@@ -77,7 +77,7 @@ fn main() {
         },
     ];
 
-    let price: u32 = cart.iter().map(|item| item.quantity).sum();
+    let price: f64= cart.iter().map(|item| item.price * item.quantity as f64).sum();
 
     println!("{:?}", price);
 
@@ -88,4 +88,33 @@ fn main() {
         .filter_map(|input| input.split_once(":"))
         .collect();
     println!("{:?}", result);
+
+    // Given:
+let emails = vec![
+    "user@example.com",
+    "invalid.email",
+    "another@test.org",
+    "bad@",
+    "good@domain.co",
+];
+
+let email: Vec<_> = emails.iter().filter_map(|email| email.find("@")).collect();
+println!(" Email{:?}", email);
+
+let value = "l5:helloi52ee";
+
+// TODO: Filter valid emails (must contain '@' and '.')
+// Expected: ["user@example.com", "another@test.org", "good@domain.co"]
+let value : Vec<_> = value.split(":").collect();
+println!("{:?}" ,value);
+
+let values = [ 1, 2 , 3, 4, 5, 6].iter();
+
+for num in values{
+    println!("{:?}", num);
+}  let a = "hello world";
+    let b = "hello world";
+
+    println!("a: {:p}", a);
+    println!("b: {:p}", b);
 }

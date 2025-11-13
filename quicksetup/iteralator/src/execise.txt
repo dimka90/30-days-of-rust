@@ -59,3 +59,16 @@ let input = "name:Alice,age:30,city:NYC,invalid,country:USA";
 // TODO: Parse into Vec of tuples, skip invalid entries
 // Hint: Use split, filter_map with split_once
 // Expected: [("name", "Alice"), ("age", "30"), ("city", "NYC"), ("country", "USA")]
+
+
+// Given:
+let emails = vec![
+    "user@example.com",
+    "invalid.email",
+    "another@test.org",
+    "bad@",
+    "good@domain.co",
+];
+
+// TODO: Filter valid emails (must contain '@' and '.')
+// Expected: ["user@example.com", "another@test.org", "good@domain.co"]
