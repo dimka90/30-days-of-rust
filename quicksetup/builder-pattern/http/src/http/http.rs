@@ -13,7 +13,7 @@ pub struct HttpRequestBuilder {
     pub headers: Vec<(String, String)>,
     pub body: Option<String>,
 }
-#[derive(Debug)]
+#[derive(Debug, PartialEq)]
 pub enum  HttpMethod {
     GET,
     POST,
