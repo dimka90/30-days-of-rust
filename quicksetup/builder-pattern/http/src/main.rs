@@ -10,7 +10,7 @@ fn main() {
         .method(HttpMethod::POST)
         .header("Content-Type", "application/json")
         .header("Authorization", "Bearer token123")
-        .body(r#"{"name": "Alice", "age": 30}"#.to_string())
+        .body(r#"{"name": "Alice", "age": 30}"#)
         .build();
     println!("{:?}\n", request)
 }

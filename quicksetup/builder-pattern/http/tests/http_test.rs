@@ -44,7 +44,7 @@ fn test_http_request_builder_body() {
     let body = r#"{name:"dimka", "age": 20 }"#.to_string();
     let build = HttpRequestBuilder::new(&url)
                                     .method(HttpMethod::POST)
-                                    .body(body.clone());
+                                    .body(&body);
     assert_eq!(build.url, url);
     assert_eq!(build.body, Some(body));
     assert_eq!(build.method, http_method);

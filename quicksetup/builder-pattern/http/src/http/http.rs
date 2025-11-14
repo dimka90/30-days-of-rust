@@ -44,8 +44,8 @@ impl HttpRequestBuilder {
         self.headers.push((key.to_string(), value.to_string()));
         self
     }
-    pub fn body(mut self, body: String) -> Self {
-        self.body = Some(body);
+    pub fn body(mut self, body: &str) -> Self {
+        self.body = Some(body.to_string().clone());
         self
     }
     pub fn build(self) -> HttpRequest {
