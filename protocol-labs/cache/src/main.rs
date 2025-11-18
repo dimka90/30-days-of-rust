@@ -46,3 +46,17 @@ where
         // Calculate only once, cache the result
     }
 }
+
+#[cfg(test)]
+mod test {
+use super::*;
+
+#[test]
+fn test_lazy_initialization() {
+    let mut redis = Cache::new(|| "Coding is fun");
+    assert_eq!(redis.value, None);
+    redis.get_or_init();
+    assert_eq!(redis.value.unwrap(), "Coding is fun");
+}
+
+}
