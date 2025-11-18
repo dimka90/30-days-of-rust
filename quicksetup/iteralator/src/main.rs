@@ -82,7 +82,7 @@ fn main() {
     println!("{:?}", price);
 
     // Given:
-    let input = "name:Alice,age:30,city:NYC,invalid,country:USA";
+    let input = "name:Alice,age:50,city:NYC,invalid,country:USA";
     let result: Vec<(_, _)> = input
         .split(",")
         .filter_map(|input| input.split_once(":"))
